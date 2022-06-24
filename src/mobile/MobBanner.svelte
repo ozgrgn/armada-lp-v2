@@ -2,18 +2,22 @@
   // import AniButton from "../components/AniButton.svelte";
   import LP_JSON from "../assets/lp.json";
   import { region } from "../services/store";
+  import AniButton from "../components/AniButton.svelte";
   console.log($region);
   let name;
   let phone;
   let formStatus;
   let warn;
-  let country= $region=="uk"?"İngiltere":"Amerika"
+  let country = $region == "uk" ? "England" : "USA";
 
   const addRes = async () => {
+    let date = new Date().toLocaleString("tr-TR");
+
     let bodyData = {
       name,
       phone,
-      country
+      country,
+      date,
     };
     if (!name || !phone) {
       warn = true;
@@ -22,8 +26,6 @@
     warn = false;
     formStatus = true;
     console.log(bodyData, "bodydata");
-
-
 
     window.dataLayer.push({
       event: "registrationComplete",
@@ -62,8 +64,9 @@
                   'hero-banner-content.strong.css'
                 ]}"-->
               <strong
-                >{LP_JSON[$region]["hero-banner-content.strong1"]} <br /> {LP_JSON[$region]["hero-banner-content.strong2"]} </strong
-              >
+                >{LP_JSON[$region]["hero-banner-content.strong1"]} <br />
+                {LP_JSON[$region]["hero-banner-content.strong2"]}
+              </strong>
             </h1>
             <ul>
               <li>
@@ -81,9 +84,7 @@
               </li>
             </ul>
             <div class="row tab-button mar-left">
-              {#await import("../components/AniButton.svelte") then component}
-                <svelte:component this={component.default} />
-              {/await}
+              <AniButton />
               <!-- <AniButton /> -->
             </div>
           </div>

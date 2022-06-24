@@ -1,28 +1,20 @@
 <script>
-  import "../assets/global.css";
   import { useLocation } from "svelte-navigator";
   import { region } from "../services/store";
+  import Banner2 from "./Banner2.svelte";
+  import Dark from "./Dark.svelte";
+  import Features from "./Features.svelte";
+  import Pricelist from "./Pricelist.svelte";
   let location = useLocation();
-  region.set( 
+  region.set(
     $location?.pathname?.split("/") &&
-      $location?.pathname?.split("/")[1].length> 0
+      $location?.pathname?.split("/")[1].length > 0
       ? $location?.pathname?.split("/")[1]
       : "uk"
   );
 </script>
 
-{#await import("./Banner2.svelte") then component}
-  <svelte:component this={component.default} />
-{/await}
-
-{#await import("./Features.svelte") then component}
-  <svelte:component this={component.default} />
-{/await}
-
-{#await import("./Pricelist.svelte") then component}
-  <svelte:component this={component.default} />
-{/await}
-{#await import("./Dark.svelte") then component}
-  <svelte:component this={component.default} />
-{/await}
-
+<Banner2 />
+<Features />
+<Pricelist />
+<Dark />

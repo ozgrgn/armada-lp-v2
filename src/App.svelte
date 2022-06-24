@@ -4,14 +4,30 @@
   import Footer from "./common/Footer.svelte";
   import Policy from "./common/Policy.svelte";
   import { onMount } from "svelte";
+  import Mobile from "./mobile/Mobile.svelte";
+  import Web from "./web/Web.svelte";
 
   onMount(() => {
+    // setTimeout(() => {
+    //   var s = document.createElement("script");
+    //   s.type = "text/javascript";
+    //   s.src = "http://code.jivosite.com/widget/wGPM2QDpTj";
+    //   document.head.appendChild(s);
+    // }, 5000);
+
     setTimeout(() => {
-      var s = document.createElement("script");
-      s.type = "text/javascript";
-      s.src = "http://code.jivosite.com/widget/wGPM2QDpTj";
-      document.head.appendChild(s);
-    }, 5000);
+      if (window.location.hash) {
+        console.log(window.location.hash.split("#")[1]);
+        let el = document.getElementById(window.location.hash.split("#")[1]);
+
+        console.log(el);
+        if (!el) return;
+
+        el.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    }, 500);
   });
 
   const mobileDetector = () => {
@@ -40,15 +56,11 @@
     <Route path="policy" component={Policy}><Policy /></Route>
     {#if isMobile}
       <Route path="/*">
-        {#await import("./mobile/Mobile.svelte") then component}
-          <svelte:component this={component.default} />
-        {/await}
+        <Mobile />
       </Route>
     {:else}
       <Route path="/*">
-        {#await import("./web/Web.svelte") then component}
-          <svelte:component this={component.default} />
-        {/await}
+        <Web />
       </Route>
     {/if}
   </Router>

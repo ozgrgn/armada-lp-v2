@@ -6,13 +6,16 @@
   let phone;
   let formStatus;
   let warn;
-  let country= $region=="uk"?"İngiltere":"Amerika"
+  let country= $region=="uk"?"England":"USA"
 
   const addRes = async () => {
+    let date = new Date().toLocaleString("tr-TR")
+
     let bodyData = {
       name,
       phone,
       country,
+      date
 
     };
     if (!name || !phone) {
@@ -53,7 +56,7 @@
                 treatments
               </h2>
               <p class="d-none d-xl-block">
-                Dental Implants are very expensive especially in England
+                Dental Implants are very expensive especially in {country}
                 compared to dental implants in Turkey. But, why would you spend
                 a fortune when you can get the same dental products at much more
                 affordable prices without compromising the quality? At Armada

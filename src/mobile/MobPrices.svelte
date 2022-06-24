@@ -1,7 +1,9 @@
 <script>
-    import AniButton from "../components/AniButton.svelte";
-
+  import AniButton from "../components/AniButton.svelte";
+  import LP_JSON from "../assets/lp.json";
+  import { region } from "../services/store";
 </script>
+
 <section id="pricelist" class="mt-4 price-bg">
   <div class="container">
     <table>
@@ -21,7 +23,7 @@
         </td>
         <td> OSSTEM® Dental <br /> Implant + Abutment </td>
         <td class="price">
-         <span>£ 350 </span>
+          <span>{LP_JSON[$region]["osstem-price"]} </span>
         </td>
       </tr>
       <tr>
@@ -34,7 +36,7 @@
           />
         </td>
         <td> Straumann® Dental <br /> Implant + Abutment </td>
-        <td class="price"> £ 690</td>
+        <td class="price"> {LP_JSON[$region]["straumann-price"]}</td>
       </tr>
       <tr>
         <td class="logo-td">
@@ -46,7 +48,12 @@
           />
         </td>
         <td> Megagen® Dental <br /> Implant + Abutment </td>
-        <td class="price"> <span class="old-price">£ 540 <br /> </span>  £ 450 </td>
+        <td class="price">
+          <span class="old-price"
+            >{LP_JSON[$region]["megagen-price-old"]} <br />
+          </span>
+          {LP_JSON[$region]["megagen-price"]}
+        </td>
       </tr>
       <tr>
         <td class="logo-td">
@@ -58,18 +65,19 @@
           />
         </td>
         <td> NucleOss® Dental <br /> Implant + Abutment </td>
-        <td class="price"> £ 300</td>
+        <td class="price"> {LP_JSON[$region]["nucleoss-price"]}</td>
       </tr>
-   <tr>    <div class="tab-button pt-4 ">
-    <AniButton/>
-   </div></tr>
+      <tr>
+        <div class="tab-button pt-4 ">
+          <AniButton />
+        </div></tr
+      >
     </table>
-
   </div>
 </section>
 
 <style>
-      .tab-button {
+  .tab-button {
     display: flex;
     flex-direction: column;
     z-index: 999999999;
@@ -93,7 +101,6 @@
     font-size: 17px;
   }
   td img {
-  
     max-height: 35px;
     vertical-align: middle;
   }

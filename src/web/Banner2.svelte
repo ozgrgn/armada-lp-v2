@@ -9,15 +9,18 @@
   let phone;
   let formStatus;
   let warn;
-  let country= $region=="uk"?"İngiltere":"Amerika"
+  let country= $region=="uk"?"England":"USA"
 
 
 
   const addRes = async () => {
+    let date = new Date().toLocaleString("tr-TR")
+
     let bodyData = {
       name,
       phone,
       country,
+      date
     };
     if (!name || !phone) {
       warn = true;
@@ -49,7 +52,9 @@
     console.log(json);
   };
 </script>
-
+<div>
+  
+</div>
 <section id="header">
   <div
     class="banner"

@@ -2,11 +2,21 @@
   "uk": {
     "hero-banner-content.strong1": "Expert Dentist Staff",
     "hero-banner-content.strong2": "in Implant Treatments",
-    "hero-banner-content.strong.css": "py-0"
+    "hero-banner-content.strong.css": "py-0",
+    "osstem-price": "£ 350",
+    "straumann-price": "£ 690",
+    "megagen-price-old": "£ 540",
+    "megagen-price": "£ 450",
+    "nucleoss-price": "£ 300"
   },
   "usa": {
     "hero-banner-content.strong1": "Professional Doctors ",
     "hero-banner-content.strong2": "in Dental Implants",
-    "hero-banner-content.strong.css": "py-4"
+    "hero-banner-content.strong.css": "py-4",
+    "osstem-price": "429 $",
+    "straumann-price": "845 $",
+    "megagen-price-old": "660 $",
+    "megagen-price": "549 $",
+    "nucleoss-price": "368 $"
   }
 }

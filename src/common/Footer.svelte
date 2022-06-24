@@ -31,7 +31,7 @@
           <div class="footer-icons mt-3 pt-1 ">
             <a use:link href="tel:+905452451254"><img
               class="ml-1"
-              src="/assets/images/icons/phone.png"
+              src="/assets/images/icons/phone.webp"
               height="30"
               alt="armada"
               loading="lazy"

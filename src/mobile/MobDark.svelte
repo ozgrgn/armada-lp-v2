@@ -5,14 +5,18 @@
   let phone;
   let formStatus;
   let warn;
-  let country= $region=="uk"?"İngiltere":"Amerika"
-  console.log(country)
+  let country= $region=="uk"?"England":"USA"
+ 
 
-  const addRes = async () => {
+
+
+  const addRes = async () => { 
+    let date = new Date().toLocaleString("tr-TR")
     let bodyData = {
       name,
       phone,
-      country
+      country,
+      date
     };
     if (!name || !phone) {
       warn = true;
@@ -50,7 +54,7 @@
               Get information for more advantageous packages in <span> implant treatments </span>
             </h2>
             <p class="">
-              Dental Implants are very expensive especially in England compared
+              Dental Implants are very expensive especially in {country} compared
                 to dental implants in Turkey. But, why would you spend a fortune
                 when you can get the same dental products at much more affordable
                 prices without compromising the quality? At Armada Smile Turkey,

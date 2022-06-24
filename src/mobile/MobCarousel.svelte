@@ -1,3 +1,7 @@
+<script>
+  import Carousel from "svelte-carousel";
+</script>
+
 <div class="container img-header">
   <div class="rows   ">
     <div class=" img-text ">
@@ -14,89 +18,82 @@
     <div class="container">
       <div class="outerb">
         <div class="rows">
-          {#await import("svelte-carousel") then component}
-            <svelte:component
-              this={component.default}
-              particlesToShow={1}
-              particlesToScroll={1}
-              dots={false}
-            >
-              <div>
-                <div class="review-container">
-                  <div class="small-image">
-                    <img
-                      class="small-image"
-                      src="/assets/images/clinic/1.webp"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
+          <Carousel particlesToShow={1} particlesToScroll={1} dots={false}>
+            <div>
               <div class="review-container">
                 <div class="small-image">
                   <img
                     class="small-image"
-                    src="/assets/images/clinic/2.webp"
+                    src="/assets/images/clinic/1.webp"
                     alt=""
                   />
                 </div>
               </div>
-              <div class="review-container">
-                <div class="small-image">
-                  <img
-                    class="small-image"
-                    src="/assets/images/clinic/3.webp"
-                    alt=""
-                  />
-                </div>
+            </div>
+            <div class="review-container">
+              <div class="small-image">
+                <img
+                  class="small-image"
+                  src="/assets/images/clinic/2.webp"
+                  alt=""
+                />
               </div>
-              <div class="review-container">
-                <div class="small-image">
-                  <img
-                    class="small-image"
-                    src="/assets/images/clinic/4.webp"
-                    alt=""
-                  />
-                </div>
+            </div>
+            <div class="review-container">
+              <div class="small-image">
+                <img
+                  class="small-image"
+                  src="/assets/images/clinic/3.webp"
+                  alt=""
+                />
               </div>
-              <div class="review-container">
-                <div class="small-image">
-                  <img
-                    class="small-image"
-                    src="/assets/images/clinic/5.webp"
-                    alt=""
-                  />
-                </div>
+            </div>
+            <div class="review-container">
+              <div class="small-image">
+                <img
+                  class="small-image"
+                  src="/assets/images/clinic/4.webp"
+                  alt=""
+                />
               </div>
-              <div class="review-container">
-                <div class="small-image">
-                  <img
-                    class="small-image"
-                    src="/assets/images/clinic/6.webp"
-                    alt=""
-                  />
-                </div>
+            </div>
+            <div class="review-container">
+              <div class="small-image">
+                <img
+                  class="small-image"
+                  src="/assets/images/clinic/5.webp"
+                  alt=""
+                />
               </div>
-              <div class="review-container">
-                <div class="small-image">
-                  <img
-                    class="small-image"
-                    src="/assets/images/clinic/7.webp"
-                    alt=""
-                  />
-                </div>
+            </div>
+            <div class="review-container">
+              <div class="small-image">
+                <img
+                  class="small-image"
+                  src="/assets/images/clinic/6.webp"
+                  alt=""
+                />
               </div>
-              <div class="review-container">
-                <div class="small-image">
-                  <img
-                    class="small-image"
-                    src="/assets/images/clinic/8.webp"
-                    alt=""
-                  />
-                </div>
+            </div>
+            <div class="review-container">
+              <div class="small-image">
+                <img
+                  class="small-image"
+                  src="/assets/images/clinic/7.webp"
+                  alt=""
+                />
               </div>
-            </svelte:component>
-          {/await}
+            </div>
+            <div class="review-container">
+              <div class="small-image">
+                <img
+                  class="small-image"
+                  src="/assets/images/clinic/8.webp"
+                  alt=""
+                />
+              </div>
+            </div>
+          </Carousel>
         </div>
       </div>
     </div>
