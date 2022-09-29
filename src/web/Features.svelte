@@ -9,7 +9,7 @@
         <div class="col-6 tab-container-left ">
           <div class="">
             <h2 class="tab-header title pt-2">
-              Why should I have <span> Implant treatment</span> <br /> at Armada Smile
+              Why should I have Implant treatment<br /> at Armada Smile
               Turkey?
             </h2>
             <div class="d-none d-xl-block ">
@@ -90,7 +90,7 @@
     line-height: 1.4;
     font-size: 18px;
     font-weight: 600;
-    color: #4d5369;
+    color: #24303d;
   }
   .tab-container-left {
     padding-left: 10px;
@@ -110,6 +110,8 @@
     margin-top: 0;
     margin-bottom: 15px;
     line-height: 2.5rem;
+    color:#24303d !important;
+  
   }
 
   .tab-button {

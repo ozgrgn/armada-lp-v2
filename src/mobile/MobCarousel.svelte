@@ -102,14 +102,14 @@
 
 <style>
   .img-header {
-    margin-top: 220px;
+    margin-top: 120px;
   }
   .box-container {
     text-align: -webkit-center;
   }
   .box .outerb {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 3px 14px -1px rgba(0, 0, 0, 0.2);
@@ -131,5 +131,6 @@
   h2 {
     font-size: 21px;
     line-height: 1.4;
+    color:#273c56 !important
   }
 </style>

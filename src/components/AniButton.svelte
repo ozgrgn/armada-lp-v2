@@ -15,17 +15,23 @@
   <span />
   <span />
   <span class="wp"> Whatsapp </span>
-  <img src="/assets/images/icons/whatsapp.png" alt="" /> <br /> Get Immediate
-  Info
+  <img class="icon" src="/assets/images/icons/whatsapp-sm.png" alt="" /> <br /> <p class="p-0 m-0 get-info">Get Immediate
+  Info</p>
 </a>
 
 <style>
-  .ani-button {
+.icon {
+  height: 16px;
+}
+.get-info {
+  font-weight: 500;
+}
+.ani-button {
     cursor: pointer;
     position: absolute;
     text-align: center;
-    color: #fff;
-    background-color: #ba4e5b;
+    color: #24303d !important;
+    background-color: #ffe91e;
     padding: 10px 30px;
     font-size: 12px;
     font-weight: 400;
@@ -36,24 +42,17 @@
     border-radius: 10px;
     z-index: 9999999;
   }
-  @media only screen and (max-width: 600px) {
-    /* .ani-button {
-      padding: 5px 10px;
-    } */
-  }
 
   .ani-button img {
     vertical-align: text-top;
   }
   .wp {
     padding-top: 7px;
-    font-size: 15px !important;
+    font-size: 16px !important;
     line-height: 16px;
     font-weight: 700 !important;
     margin: 0 !important;
-  }
-
-  .ani-button:before {
+  }  .ani-button:before {
     position: absolute;
     top: 2px;
     left: 2px;
@@ -68,7 +67,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(to right, rgb(255, 255, 255), #ba4e5b);
+    background: linear-gradient(to right, rgb(255, 255, 255), #ffe91e);
     animation: animate1 2s linear infinite;
   }
 
@@ -88,7 +87,7 @@
     right: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(to bottom, rgb(255, 255, 255), #ba4e5b);
+    background: linear-gradient(to bottom, rgb(255, 255, 255), #ffe91e);
     animation: animate2 2s linear infinite;
     animation-delay: 1s;
   }
@@ -109,7 +108,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(to left, rgb(255, 255, 255), #ba4e5b);
+    background: linear-gradient(to left, rgb(255, 255, 255), #ffe91e);
     animation: animate3 2s linear infinite;
   }
 
@@ -129,7 +128,7 @@
     left: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(to top, rgb(255, 255, 255), #ba4e5b);
+    background: linear-gradient(to top, rgb(255, 255, 255), #ffe91e);
     animation: animate4 2s linear infinite;
     animation-delay: 1s;
   }

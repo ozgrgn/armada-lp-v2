@@ -8,7 +8,7 @@
     <table>
       <tr>
         <td colspan="3">
-          <h2 class="title mb-0">IMPLANT TREATMENTS PRICES</h2>
+          <h2 class="title mb-0">DENTAL IMPLANT PRICE LIST</h2>
         </td></tr
       >
       <tr>
@@ -91,7 +91,7 @@
   .old-price {
     text-decoration-line: line-through;
     padding-right: 10px;
-    color: #ba4e5b;
+    color: #ffe91e;
   }
   .price {
     padding-right: 2rem;

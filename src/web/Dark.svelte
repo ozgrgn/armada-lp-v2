@@ -2,6 +2,7 @@
   import AniButton from "../components/AniButton.svelte";
 
   import { region } from "../services/store";
+  import SmallForm from "./SmallForm.svelte";
   let name;
   let phone;
   let formStatus;
@@ -71,78 +72,7 @@
         </div>
       </div>
       <div class="col-12 col-md-5">
-        <div class="hero-contact-form">
-          <div class=" contact-form">
-            <p>Diagnosis And Cost In Minutes</p>
-            <form class="contact__form">
-              <div
-                class="alert alert-success contact__msg {formStatus == true
-                  ? 'display'
-                  : 'no-display'}"
-                role="alert"
-              >
-                Your message was sent successfully.
-              </div>
-              <div
-                class="alert-warn  contact__msg {warn == true
-                  ? 'display'
-                  : 'no-display'}"
-                role="alert"
-              >
-                Please enter your name and phone
-              </div>
-              <ul class={formStatus == true ? "no-display" : "display"}>
-                <li style=" height:50px !important;">
-                  <input
-                    style="
-                        background: url('/assets/images/icons/user.png') no-repeat
-                          scroll 7px 11px;
-                        background-size: 20px 20px;
-                        padding-left: 35px; 
-                       
-                      "
-                    type="text"
-                    name="name"
-                    placeholder="Name Surname"
-                    autocomplete="name"
-                    bind:value={name}
-                  />
-                </li>
-                <li>
-                  <input
-                    style="
-                        background: url('/assets/images/icons/{$region}.png') no-repeat
-                          scroll 7px 11px;
-                        background-size: 20px 20px;
-                        padding-left: 35px;
-                      "
-                    type="tel"
-                    name="tel"
-                    placeholder="Phone"
-                    autocomplete="tel"
-                    bind:value={phone}
-                  />
-                </li>
-                <li>
-                  <button
-                    type="button"
-                    class="free-quote-button"
-                    on:click={addRes}
-                  >
-                    Get Free Quote</button
-                  >
-                  <!-- <input
-                      type="submit"
-                      obc
-                      name="submit"
-                      value="Get Free Quote"
-                    /> -->
-                </li>
-                <li />
-              </ul>
-            </form>
-          </div>
-        </div>
+  <SmallForm></SmallForm>
       </div>
     </div>
   </div>
@@ -151,7 +81,7 @@
 <style>
   
   .video-bg {
-    background-color: #4d5369;
+    background-color: #24303d;
     height: 450px;
     display: flex;
     flex-direction: column;
@@ -250,9 +180,9 @@
   }
   
   .free-quote-button {
-    background: #ba4e5b;
+    background: #ffe91e;
     border-radius: 10px;
-    color: #fff;
+    color: #24303d !important;
     height: 50px;
     line-height: 50px;
     font-weight: 600;

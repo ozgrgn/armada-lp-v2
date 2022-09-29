@@ -63,7 +63,7 @@
             /></a>
           </div>
         </div>
-        <div class="col-md-4 col-12 text-center">
+        <div class="col-md-4 col-12 text-center pt-2">
           <img src="/assets/images/icons/link.png" alt=""  loading="lazy"/>
 
           <h5>Service Policy</h5>
@@ -84,7 +84,7 @@
 
       <div class="col-md-12 text-center">
         <p>
-          Copyright © 2022 <span>Armada Smile</span>
+          Copyright © 2022 Armada Smile
         </p>
       </div>
 
@@ -101,7 +101,7 @@
   }
 }
   .top{
-    margin-top:200px
+    margin-top:300px
   }
     .footer-bottom {
     background-color: #fff;

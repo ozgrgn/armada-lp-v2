@@ -61,19 +61,19 @@ ul {
 h5 {
   line-height: 1.2;
   margin-top: 0;
-  color: #4d5369;
+  color: #24303d;
   margin-bottom: 20px;
   font-weight: 500;
   font-size: 20px;
 }
 a:-webkit-any-link {
-  color: #4d5369;
+  color: #24303d;
 }
 h2 {
   font-size: 26px;
 }
 p span {
-  color: #ba4e5b;
+  color: #ffe91e;
   font-weight: 700;
   font-size: 22px;
 }
@@ -103,10 +103,10 @@ p span {
 }
 
 .title {
-  color: #4d5369 !important;
+  color: #ffffff !important;
 }
 .title span {
-  color: #ba4e5b;
+  color: #ffe91e;
 }
 
 .justify-content-center {

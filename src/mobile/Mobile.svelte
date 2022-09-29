@@ -22,6 +22,6 @@
 
 <MobFeatures />
 
-<MobPrices />
+
 
 <MobDark />

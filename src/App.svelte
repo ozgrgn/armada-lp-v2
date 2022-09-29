@@ -52,7 +52,7 @@
 <main>
   <Navbar />
 
-  <Router>
+  <Router primary={false}>
     <Route path="policy" component={Policy}><Policy /></Route>
     {#if isMobile}
       <Route path="/*">

@@ -13,8 +13,8 @@
         <a class="navbar-brand" use:link href="/"
           ><img
             class="navbar-brand  pl-3 mt-2"
-            src="/assets/images/logos/armada-smile-logo.png"
-            height="50"
+            src="/assets/images/logos/armadasmile-logo.png"
+            height="60"
             alt="armada"
           /></a
         >
@@ -71,11 +71,11 @@
 
 <style>
   #navbar-main {
-    background: #ba4e5b !important;
+    background: #ffe91e !important;
     box-shadow: 0 16px 37px -22px rgba(2, 2, 2, 0.32);
   }
   .bar {
-    background: #ba4e5b !important;
+    background: #ffe91e !important;
     height: 65px;
     display: flex;
     justify-content: space-between;

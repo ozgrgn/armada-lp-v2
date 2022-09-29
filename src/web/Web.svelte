@@ -16,5 +16,5 @@
 
 <Banner2 />
 <Features />
-<Pricelist />
+
 <Dark />
