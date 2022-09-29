@@ -1,5 +1,7 @@
 <script>
       import AniButton from "../components/AniButton.svelte";
+      import LP_JSON from "../assets/lp.json";
+  import { perma } from "../services/store";
 </script>
 
 
@@ -9,8 +11,7 @@
         <div class="col-6 tab-container-left ">
           <div class="">
             <h2 class="tab-header title pt-2">
-              Why should I have Implant treatment<br /> at Armada Smile
-              Turkey?
+              {LP_JSON[$perma]["features_title1"]}<br /> {LP_JSON[$perma]["features_title2"]}
             </h2>
             <div class="d-none d-xl-block ">
               <table class="second-items">
@@ -19,11 +20,11 @@
                     <img src="/assets/images/icons/dentist.png" alt="dentist" />
                   </td>
   
-                  <td>Specialists in <br /> implant treatments</td>
+                  <td>{LP_JSON[$perma]["features1_1"]} <br /> {LP_JSON[$perma]["features1_2"]} </td>
                   <td>
                     <img src="/assets/images/icons/implant.png" alt="implant" />
                   </td>
-                  <td> The world’s best <br /> implant brands</td>
+                  <td>{LP_JSON[$perma]["features2_1"]} <br /> {LP_JSON[$perma]["features2_2"]}</td>
                 </tr>
                 <tr>
                   <td>
@@ -32,39 +33,39 @@
                       alt="implant price"
                     />
                   </td>
-                  <td>70% more <br />affordable prices</td>
+                  <td>{LP_JSON[$perma]["features3_1"]} <br /> {LP_JSON[$perma]["features3_2"]}</td>
                   <td>
                     <img
                       src="/assets/images/icons/once_7_days.png"
                       alt="once 7 days"
                     />
                   </td>
-                  <td> Period of treatments <br /> just in 7 days </td>
+                  <td>{LP_JSON[$perma]["features4_1"]} <br /> {LP_JSON[$perma]["features4_2"]}</td>
                 </tr>
   
                 <tr>
                   <td>
                     <img src="/assets/images/icons/hotel-sign.png" alt="hotel" />
                   </td>
-                  <td> Free hotel <br />accommodation</td>
+                  <td>{LP_JSON[$perma]["features5_1"]} <br /> {LP_JSON[$perma]["features5_2"]}</td>
                   <td>
                     <img src="/assets/images/icons/info.png" alt="once 7 days" />
                   </td>
-                  <td>Airport-Hotel-Clinic <br /> free transfer </td>
+                  <td>{LP_JSON[$perma]["features6_1"]} <br /> {LP_JSON[$perma]["features6_2"]}</td>
                 </tr>
   
                 <tr>
                   <td>
                     <img src="/assets/images/icons/check.png" alt="check" />
                   </td>
-                  <td> Free Consultation <br />& X-rays</td>
+                  <td>{LP_JSON[$perma]["features7_1"]} <br /> {LP_JSON[$perma]["features7_2"]}</td>
                   <td>
                     <img
                       src="/assets/images/icons/language.png"
                       alt="implant treatment info"
                     />
                   </td>
-                  <td>English speaking team <br /> in all your appointments</td>
+                  <td>{LP_JSON[$perma]["features8_1"]} <br /> {LP_JSON[$perma]["features2_2"]}</td>
                 </tr>
               </table>
             </div>
@@ -88,7 +89,7 @@
   .second-items td {
     height: 70px;
     line-height: 1.4;
-    font-size: 18px;
+    font-size: 1.2vw;
     font-weight: 600;
     color: #24303d;
   }
@@ -109,9 +110,12 @@
   .tab-header {
     margin-top: 0;
     margin-bottom: 15px;
-    line-height: 2.5rem;
+    line-height: 2rem;
     color:#24303d !important;
   
+  }
+  h2 {
+    font-size:1.7vw !important
   }
 
   .tab-button {

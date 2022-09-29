@@ -1,54 +1,10 @@
 <script>
   // import AniButton from "../components/AniButton.svelte";
   import LP_JSON from "../assets/lp.json";
-  import { region } from "../services/store";
+  import { perma } from "../services/store";
   import AniButton from "../components/AniButton.svelte";
   import MobSmallForm from "./MobSmallForm.svelte";
-  console.log($region);
-  let name;
-  let phone;
-  let email;
-  let formStatus;
-  let warn;
-  let country = $region == "uk" ? "England" : "USA";
-
-  const addRes = async () => {
-    let date = new Date().toLocaleString("tr-TR");
-
-    let bodyData = {
-      name,
-      phone,
-      country,
-      date,
-      email
-    };
-    if (!name || !phone) {
-      warn = true;
-      return;
-    }
-    warn = false;
-    formStatus = true;
-    console.log(bodyData, "bodydata");
-
-    window.dataLayer.push({
-      event: "registrationComplete",
-    });
-
-    window.dataLayer.push({
-      event: "registrationComplete",
-      "custom.gtm.element": "register",
-    });
-    // https://armada-lp-backend.herokuapp.com
-    const res = await fetch("https://armada-lp-backend.herokuapp.com", {
-      method: "POST",
-      body: JSON.stringify(bodyData),
-      headers: {
-        "content-type": "application/json",
-      },
-    });
-    const json = await res.json();
-    console.log(json);
-  };
+  console.log($perma);
 </script>
 
 <section id="header">
@@ -56,49 +12,48 @@
     class="banner"
     style="background: url(/assets/images/hero.jpeg)  no-repeat center center ;background-size: cover; "
   >
-  <div class="overlay" />
+    <div class="overlay" />
     <div class="container oil">
       <div class="row s ">
         <div class="col-12">
           <div class="hero-banner-content">
             <h1 class="header spot ">
-              Full Mouth Dental Implants</h1>
-              <!-- you'll see dynamic css change at below  
-                class="d-flex {LP_JSON[$region][
+              {LP_JSON[$perma]["banner_h1"]}
+            </h1>
+            <!-- you'll see dynamic css change at below  
+                class="d-flex {LP_JSON[$perma][
                   'hero-banner-content.strong.css'
                 ]}"-->
-              <h3
-                >{LP_JSON[$region]["hero-banner-content.strong1"]} 
-                {LP_JSON[$region]["hero-banner-content.strong2"]}
-                </h3>
-           
+            <h3>
+              {LP_JSON[$perma]["hero-banner-content.strong1"]}
+              {LP_JSON[$perma]["hero-banner-content.strong2"]}
+            </h3>
+
             <ul>
               <li>
                 <p class="mb-1">
-                  Implant prices starting from <span>499$</span>
+                  {LP_JSON[$perma]["hero-banner-content.second1"]} <span> {LP_JSON[$perma]["hero-banner-content.second2"]} </span>
                 </p>
               </li>
             </ul>
             <ul>
               <li>
                 <p class="hero-second-banner mt-0">
-                  Full mouth dental implants with crown is completed in
-                  <span>just 7 days</span>
+                  {LP_JSON[$perma]["hero-banner-content.third1"]} {LP_JSON[$perma]["hero-banner-content.third2"]}
+                  <span>  {LP_JSON[$perma]["hero-banner-content.third3"]}</span>
                 </p>
               </li>
             </ul>
             <div class="tab-button mar-left">
               <div class="button-container">
-              <AniButton />
-        
-            </div>
+                <AniButton />
+              </div>
               <!-- <AniButton /> -->
             </div>
           </div>
         </div>
         <div class="col-12 space">
-       <MobSmallForm>
-       </MobSmallForm>
+          <MobSmallForm />
         </div>
       </div>
     </div>
@@ -106,7 +61,6 @@
 </section>
 
 <style>
- 
   .banner {
     position: relative;
     height: 550px;
@@ -117,7 +71,6 @@
     /* background: linear-gradient(to top, #0c68ec, #ffffff); */
   }
   .header {
-    font-size: 1.9rem;
     line-height: 1.3;
     padding-top: 50px;
     margin-bottom: 0;
@@ -129,10 +82,15 @@
   }
   .spot {
     color: #ffffff;
-    font-size: 6.5vw;
+    font-size: 6.3vw;
     margin: 0 0 6px 0;
-    line-height: 0.5; 
+    line-height: 0.5;
     text-shadow: 0.5px 0.5px black;
+  }
+  @media only screen and (min-width: 575px) {
+    .spot {
+      line-height: 1;
+    }
   }
 
   .hero-banner-content h1 span {
@@ -141,7 +99,7 @@
     color: #ffffff;
   }
   h3 {
-    font-size: 6.5vw;
+    font-size: 6.2vw;
     margin: 0;
   }
   p {
@@ -170,7 +128,7 @@
     justify-content: center;
   }
   .space {
-    margin-top:30px
+    margin-top: 30px;
   }
   .overlay {
     position: absolute;

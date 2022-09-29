@@ -1,12 +1,13 @@
 <script>
   import { region } from "../services/store";
+  import { perma } from "../services/store";
+  import LP_JSON from "../assets/lp.json";
   let name;
   let phone;
   let email;
   let formStatus;
   let warn;
-  let lp = "Implant";
-
+  let lp = $region +"/"+ $perma
   const addRes = async () => {
     let date = new Date().toLocaleString("tr-TR");
 
@@ -51,8 +52,8 @@
 <div class="hero-contact-form">
   <div class="contact-form">
     <h2 class="form-header">
-      Get Dental Implant Prices
-      <br> in a Minute
+        {LP_JSON[$perma]["form_title1"]}
+      <br> {LP_JSON[$perma]["form_title2"]}
     </h2>
     <form class="contact__form">
       <div

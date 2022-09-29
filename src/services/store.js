@@ -4,4 +4,6 @@ import { writable } from "svelte/store";
 
 
 
-export const region = writable(null);
+export let perma = writable(null);
+
+export let region = writable(null);

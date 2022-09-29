@@ -1,5 +1,6 @@
 <script>
-  import AniButton from "../components/AniButton.svelte";
+    import LP_JSON from "../assets/lp.json";
+  import { perma } from "../services/store";
 </script>
 
 <section id="features">
@@ -8,7 +9,7 @@
       <div class="sec-mod-text">
         <div class="">
           <h2 class="tab-header title pb-1">
-            Why should I have  Implant treatment at Armada Smile Turkey?
+            {LP_JSON[$perma]["features_title1"]}  {LP_JSON[$perma]["features_title2"]}
           </h2>
           <div class=" ">
             <table class="second-items">
@@ -20,7 +21,7 @@
                     loading="lazy"
                   />
                 </td>
-                <td>Specialists in implant treatments</td>
+                <td>{LP_JSON[$perma]["features1_1"]}  {LP_JSON[$perma]["features1_2"]} </td>
               </tr>
               <tr>
                 <td>
@@ -30,7 +31,7 @@
                     loading="lazy"
                   />
                 </td>
-                <td> The world’s best implant brands</td>
+                <td>{LP_JSON[$perma]["features2_1"]}  {LP_JSON[$perma]["features2_2"]}</td>
               </tr><tr>
                 <td>
                   <img
@@ -39,7 +40,7 @@
                     loading="lazy"
                   />
                 </td>
-                <td>70% more affordable prices</td>
+                <td>{LP_JSON[$perma]["features3_1"]}  {LP_JSON[$perma]["features3_2"]}</td>
               </tr>
               <tr>
                 <td>
@@ -49,7 +50,7 @@
                     loading="lazy"
                   />
                 </td>
-                <td> Period of treatments just in 7 days </td>
+                <td>{LP_JSON[$perma]["features4_1"]}  {LP_JSON[$perma]["features4_2"]}</td>
               </tr>
               <tr>
                 <td>
@@ -59,7 +60,7 @@
                     loading="lazy"
                   />
                 </td>
-                <td> Free hotel accommodation</td>
+                <td>{LP_JSON[$perma]["features5_1"]}  {LP_JSON[$perma]["features5_2"]}</td>
               </tr>
               <tr>
                 <td>
@@ -69,7 +70,27 @@
                     loading="lazy"
                   />
                 </td>
-                <td>Airport-Hotel-Clinic free transfer </td>
+                <td>{LP_JSON[$perma]["features6_1"]}  {LP_JSON[$perma]["features6_2"]}</td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="/assets/images/icons/check.png"
+                    alt="once 7 days"
+                    loading="lazy"
+                  />
+                </td>
+                <td>{LP_JSON[$perma]["features7_1"]}  {LP_JSON[$perma]["features7_2"]}</td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="/assets/images/icons/language.png"
+                    alt="once 7 days"
+                    loading="lazy"
+                  />
+                </td>
+                <td>{LP_JSON[$perma]["features8_1"]}  {LP_JSON[$perma]["features8_2"]}</td>
               </tr>
             </table>
           </div>
@@ -81,13 +102,16 @@
 </section>
 
 <style>
+  .container {
+    padding: 0;
+  }
   .sec-mod-text {
-    margin: 50px 15px 15px 15px;
+    margin: 50px 15px 15px 20px;
   }
   table td {
     font-size: 18px;
-    line-height: 1.4;
-    height: 60px;
+    line-height: 1.2;
+    height: 55px;
   }
   table td img {
     width: 38px;
@@ -97,11 +121,11 @@
   }
   .title {
     color: #24303d !important;
-    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.2);
+   
   }
 
   h2 {
-    font-size: 21px;
+    font-size: 5.9vw;
     line-height: 1.4;
   }
 </style>

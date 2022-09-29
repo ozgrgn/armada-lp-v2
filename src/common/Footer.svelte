@@ -101,7 +101,7 @@
   }
 }
   .top{
-    margin-top:300px
+    margin-top:250px
   }
     .footer-bottom {
     background-color: #fff;
@@ -112,9 +112,5 @@
     color: #141414;
     margin-bottom: 10 px;
     line-height: 1.43;
-  }
-
-  p span {
-    font-size: 16px;
   }
 </style>

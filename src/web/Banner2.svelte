@@ -2,9 +2,10 @@
   import AniButton from "../components/AniButton.svelte";
   import Carousel from "svelte-carousel";
   import LP_JSON from "../assets/lp.json";
-
-  import { region } from "../services/store";
+  import { perma } from "../services/store";
   import SmallForm from "./SmallForm.svelte";
+
+  console.log($perma);
 </script>
 
 <section id="header">
@@ -19,26 +20,29 @@
           <div class="right-area">
             <div class="hero-banner-content  ">
               <div class="d">
-                <h1 class="header spot">Full Mouth Dental Implants</h1>
+                <h1 class="header spot">{LP_JSON[$perma]["banner_h1"]}</h1>
                 <h3>
-                  {LP_JSON[$region]["hero-banner-content.strong1"]}
+                  {LP_JSON[$perma]["hero-banner-content.strong1"]}
                   <span>
-                    {LP_JSON[$region]["hero-banner-content.strong2"]}
+                    {LP_JSON[$perma]["hero-banner-content.strong2"]}
                   </span>
                 </h3>
 
                 <ul class="my-4">
                   <li>
                     <p class="mb-1">
-                      Implant prices starting from <span>499$</span>
+                      {LP_JSON[$perma]["hero-banner-content.second1"]}
+                      <span
+                        >{LP_JSON[$perma]["hero-banner-content.second2"]}
+                      </span>
                     </p>
                   </li>
 
                   <li>
                     <p class="hero-second-banner mt-0">
-                      Full mouth dental implant with permanent<br /> teeth in
-                      only
-                      <span> 7 days</span>
+                      {LP_JSON[$perma]["hero-banner-content.third1"]}<br />
+                      {LP_JSON[$perma]["hero-banner-content.third2"]}
+                      <span>  {LP_JSON[$perma]["hero-banner-content.third3"]}</span>
                     </p>
                   </li>
                 </ul>
@@ -222,8 +226,6 @@
     font-size: 12px;
     text-align: center;
   }
-
-
 
   .box {
     margin-top: -70px;

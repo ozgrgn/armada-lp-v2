@@ -1,5 +1,7 @@
 <script>
   import { link } from "svelte-navigator";
+  import LP_JSON from "../assets/lp.json";
+  import { perma } from "../services/store";
 
 </script>
 
@@ -7,7 +9,7 @@
   class="ani-button" 
   id="wp"
   use:link
-  href="https://api.whatsapp.com/send?phone=+905452451254&text=Hello,%0a  I would like to get information about dental Implants."
+  href="https://api.whatsapp.com/send?phone=+905452451254&text=Hello,%0a  {LP_JSON[$perma]["wp_message"]}"
   target="_blank"
 >
   <span />

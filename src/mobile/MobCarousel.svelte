@@ -6,9 +6,9 @@
   <div class="rows   ">
     <div class=" img-text ">
       <div class="">
-        <h2 class="image-header title text-center">
+        <h3 class="image-header title text-center">
           Armada Smile Dental <br /> Antalya / Turkey
-        </h2>
+        </h3>
       </div>
     </div>
   </div>
@@ -101,6 +101,15 @@
 </div>
 
 <style>
+  @media only screen and (min-width: 600px) {
+    .container {
+      margin-top: 50px !important;
+    }
+    .img-header {
+      margin-top: 350px !important;
+    }
+  }
+
   .img-header {
     margin-top: 120px;
   }
@@ -128,9 +137,9 @@
   .small-image {
     width: 100%;
   }
-  h2 {
-    font-size: 21px;
+  h3 {
+    font-size: 5vw;
     line-height: 1.4;
-    color:#273c56 !important
+    color: #273c56 !important;
   }
 </style>

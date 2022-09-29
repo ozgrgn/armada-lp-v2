@@ -1,6 +1,6 @@
 <script>
   import LP_JSON from "../assets/lp.json";
-  import { region } from "../services/store";
+  import { perma } from "../services/store";
 </script>
 
 <section id="pricelist" class="mt-5 price-bg">
@@ -20,7 +20,7 @@
           />
         </td>
         <td> OSSTEM® Dental Implant + Abutment </td>
-        <td class="price"> {LP_JSON[$region]["osstem-price"]} </td>
+        <td class="price"> {LP_JSON[$perma]["osstem-price"]} </td>
       </tr>
       <tr>
         <td class="logo-td">
@@ -31,7 +31,7 @@
           />
         </td>
         <td> Straumann® Dental Implant + Abutment </td>
-        <td class="price"> {LP_JSON[$region]["straumann-price"]}</td>
+        <td class="price"> {LP_JSON[$perma]["straumann-price"]}</td>
       </tr>
       <tr>
         <td class="logo-td">
@@ -44,8 +44,8 @@
         <td> Megagen® Dental Implant + Abutment </td>
         <td class="price">
           <span class="old-price"
-            >{LP_JSON[$region]["megagen-price-old"]}
-          </span>{LP_JSON[$region]["megagen-price"]}
+            >{LP_JSON[$perma]["megagen-price-old"]}
+          </span>{LP_JSON[$perma]["megagen-price"]}
         </td>
       </tr>
       <tr>
@@ -57,7 +57,7 @@
           />
         </td>
         <td> NucleOss® Dental Implant + Abutment </td>
-        <td class="price"> {LP_JSON[$region]["nucleoss-price"]}</td>
+        <td class="price"> {LP_JSON[$perma]["nucleoss-price"]}</td>
       </tr>
     </table>
   </div>
