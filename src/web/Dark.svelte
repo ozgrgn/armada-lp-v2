@@ -15,20 +15,10 @@
           <div class="video-left-area">
             <div class="video-left-text pl-5">
               <h2 class="video-header">
-                Get information for more favorable packages in {LP_JSON[$perma][
-                  "treatment"
-                ]}
-                treatments
+                {LP_JSON[$perma]["dark_header"]}
               </h2>
               <p class="d-none d-xl-block">
-                Dental {LP_JSON[$perma]["treatment"]} treatments are very expensive
-                especially in {country}
-                compared to dental {LP_JSON[$perma]["treatment"]} treatments in Turkey.
-                But, why would you spend a fortune when you can get the same dental
-                products at much more affordable prices without compromising the
-                quality? At Armada Smile Turkey, we only offer high-end, certified
-                dental {LP_JSON[$perma]["treatment"]}
-                brands with the highest success rates for our patients
+                {LP_JSON[$perma]["dark_text"]}
               </p>
             </div>
           </div>

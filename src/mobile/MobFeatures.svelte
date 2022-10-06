@@ -1,6 +1,7 @@
 <script>
     import LP_JSON from "../assets/lp.json";
   import { perma } from "../services/store";
+  import MobClinic from "./MobClinic.svelte";
 </script>
 
 <section id="features">
@@ -26,7 +27,7 @@
               <tr>
                 <td>
                   <img
-                    src="/assets/images/icons/implant.png"
+                    src="/assets/images/icons/{LP_JSON[$perma]["features2_icon"]}.png"
                     alt="implant"
                     loading="lazy"
                   />
@@ -98,10 +99,14 @@
       </div>
     </div>
   </div>
-
+  <div class="clinic-3d">
+<MobClinic /></div>
 </section>
 
 <style>
+.clinic-3d {
+  padding:15px
+}
   .container {
     padding: 0;
   }
@@ -125,7 +130,10 @@
   }
 
   h2 {
-    font-size: 5.9vw;
+    text-align: text;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 4.5vw;
     line-height: 1.4;
   }
 </style>

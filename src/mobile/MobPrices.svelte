@@ -80,7 +80,7 @@
   .tab-button {
     display: flex;
     flex-direction: column;
-    z-index: 999999999;
+    z-index: 999;
   }
   h2 {
     line-height: 1.3;

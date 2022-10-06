@@ -9,7 +9,7 @@
   class="ani-button" 
   id="wp"
   use:link
-  href="https://api.whatsapp.com/send?phone=+905452451254&text=Hello,%0a  {LP_JSON[$perma]["wp_message"]}"
+  href="https://api.whatsapp.com/send?phone= {LP_JSON[$perma]["wp"]} &text=Hello,%0a  {LP_JSON[$perma]["wp_message"]}"
   target="_blank"
 >
   <span />
@@ -42,7 +42,7 @@
     box-shadow: 0 20px 50px rgba(41, 32, 32, 0);
     overflow: hidden;
     border-radius: 10px;
-    z-index: 9999999;
+    z-index: 999;
   }
 
   .ani-button img {

@@ -72,7 +72,7 @@
   }
   .header {
     line-height: 1.3;
-    padding-top: 50px;
+    padding-top: 70px;
     margin-bottom: 0;
   }
   .hero-banner-content {
@@ -104,19 +104,20 @@
   }
   p {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 4vw;
   }
   p span {
     color: #ffe91e;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 4vw;
   }
   .hero-second-banner {
     line-height: 1.5;
   }
 
   .button-container {
-    height: 110px;
+
+    height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;

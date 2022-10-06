@@ -40,7 +40,10 @@
 
                   <li>
                     <p class="hero-second-banner mt-0">
-                      {LP_JSON[$perma]["hero-banner-content.third1"]}<br />
+                      {LP_JSON[$perma]["hero-banner-content.third1"]} 
+                      {#if LP_JSON[$perma]["hero-banner-content.third2"]}
+                      <br />
+                      {/if}
                       {LP_JSON[$perma]["hero-banner-content.third2"]}
                       <span>  {LP_JSON[$perma]["hero-banner-content.third3"]}</span>
                     </p>
@@ -158,10 +161,16 @@
     color: #ffffff;
     margin: 0;
     font-size: 28px;
-    line-height: 30px;
+    line-height: 40px;
     font-weight: 500;
     text-shadow: 0.5px 0.5px black;
   }
+  @media only screen and (min-width: 1200px) {
+      .header{
+        line-height: 30px !important;
+  }
+}
+
   .title {
     color: #24303d !important;
     text-shadow: none;

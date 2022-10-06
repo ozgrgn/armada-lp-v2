@@ -110,9 +110,6 @@
     }
   }
 
-  .img-header {
-    margin-top: 120px;
-  }
   .box-container {
     text-align: -webkit-center;
   }
@@ -124,7 +121,7 @@
     box-shadow: 0 3px 14px -1px rgba(0, 0, 0, 0.2);
   }
   .img-header {
-    margin-top: 220px;
+    margin-top: 240px;
   }
   .review-container {
     display: flex;

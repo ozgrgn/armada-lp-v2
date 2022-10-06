@@ -1,9 +1,12 @@
 <script>
   import { link } from "svelte-navigator";
+  import { perma } from "../services/store";
+  import LP_JSON from "../assets/lp.json";
+
 
 
 </script>
-
+{#if $perma}
 <section class="top">
   <div class="footer mt-4">
     <div class="container">
@@ -16,10 +19,11 @@
           <p>Muratpaşa / Antalya / TURKEY</p>
 
           <p>
-            <a use:link href="mailto:sayafarmada@gmail.com">sayafarmada@gmail.com</a>
+            <a href="mailto:info@armadasmile.com">info@armadasmile.com</a>
           </p>
-          <a use:link href="tel:+905452451254">
-          <p>+90 545 245 12 54</p>
+          <a href="tel:{LP_JSON[$perma]["tel"]}">
+          <p>{LP_JSON[$perma]["tel"]}
+          </p>
         </a>
         </div>
         <div class="col-md-4 col-12 text-center">
@@ -94,6 +98,7 @@
     <!--end row -->
   </div>
 </section>
+{/if}
 <style>
     @media only screen and (min-width: 600px) {
       .top{
