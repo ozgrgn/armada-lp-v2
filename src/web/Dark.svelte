@@ -18,7 +18,13 @@
                 {LP_JSON[$perma]["dark_header"]}
               </h2>
               <p class="d-none d-xl-block">
-                {LP_JSON[$perma]["dark_text"]}
+                Dental implant treatments are very expensive especially in
+                {country} compared to dental implant treatments in Turkey. But,
+                why would you spend a fortune when you can get the same dental
+                products at much more affordable prices without compromising the
+                quality? At Armada Smile Turkey, we only offer high-end,
+                certified dental implant brands with the highest success rates
+                for our patients
               </p>
             </div>
           </div>

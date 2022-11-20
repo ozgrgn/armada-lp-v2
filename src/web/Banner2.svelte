@@ -4,6 +4,8 @@
   import LP_JSON from "../assets/lp.json";
   import { perma } from "../services/store";
   import SmallForm from "./SmallForm.svelte";
+  import { region } from "../services/store";
+  let price = $region == "uk" ? "£279" : "$279";
 
   console.log($perma);
 </script>
@@ -33,7 +35,7 @@
                     <p class="mb-1">
                       {LP_JSON[$perma]["hero-banner-content.second1"]}
                       <span
-                        >{LP_JSON[$perma]["hero-banner-content.second2"]}
+                        >{price}
                       </span>
                     </p>
                   </li>

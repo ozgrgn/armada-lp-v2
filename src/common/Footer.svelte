@@ -57,7 +57,7 @@
               loading="lazy"
             /></a> 
 
-            <a use:link href="https://api.whatsapp.com/send?phone=+905452451254&text=Hello,%0a  I would like to get information about dental Implants." target="_blank">
+            <a href="https://api.whatsapp.com/send?phone=+905452451254&text=Hello,%0a  I would like to get information about dental Implants.">
             <img
               class="ml-1"
               src="/assets/images/icons/whatsappthin.png"

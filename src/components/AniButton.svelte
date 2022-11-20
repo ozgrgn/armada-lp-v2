@@ -2,16 +2,14 @@
   import { link } from "svelte-navigator";
   import LP_JSON from "../assets/lp.json";
   import { perma } from "../services/store";
+  import { region } from "../services/store";
+  let phone = $region == "uk" ? "905452451254" : "905448215151";
 
 </script>
 
 <a
   class="ani-button" 
-  id="wp"
-  use:link
-  href="https://api.whatsapp.com/send?phone= {LP_JSON[$perma]["wp"]} &text=Hello,%0a  {LP_JSON[$perma]["wp_message"]}"
-  target="_blank"
->
+  href="https://wa.me/{phone}?text=Hello,%20I%20would%20like%20to%20get%20information%20about%20dental%20Implants." target="_blank">
   <span />
   <span />
   <span />

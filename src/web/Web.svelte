@@ -1,4 +1,5 @@
 <script>
+  import Reviews from "./Reviews.svelte";
   import { useLocation } from "svelte-navigator";
   import { perma } from "../services/store";
   import { region } from "../services/store";
@@ -24,5 +25,5 @@
 
 <Banner2 />
 <Features />
-
+<Reviews></Reviews>
 <Dark />
