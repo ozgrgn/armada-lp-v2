@@ -36,7 +36,7 @@
       "custom.gtm.element": "register",
     });
 
-    const res = await fetch("https://super--backend.herokuapp.com/armada-lp", {
+    const res = await fetch("https://super-backend.herokuapp.com/armada-lp", {
       // const res = await fetch("http://localhost:3000", {
       method: "POST",
       body: JSON.stringify(bodyData),

@@ -35,7 +35,7 @@
                     <p class="mb-1">
                       {LP_JSON[$perma]["hero-banner-content.second1"]}
                       <span
-                        >{price}
+                        >{LP_JSON[$perma]["hero-banner-content.second2"]}
                       </span>
                     </p>
                   </li>
