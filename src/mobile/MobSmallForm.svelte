@@ -2,14 +2,18 @@
   import { region } from "../services/store";
   import { perma } from "../services/store";
   import LP_JSON from "../assets/lp.json";
+  import PhoneInput from "../components/Form/PhoneInput.svelte";
   let name;
   let phone;
   let email;
   let formStatus;
   let warn;
-  let lp = $region +"/"+ $perma
+  let dialCode;
+  let lp = $region + "/" + $perma;
 
   const addRes = async () => {
+    phone = dialCode + phone;
+
     let date = new Date().toLocaleString("tr-TR");
 
     let bodyData = {
@@ -37,8 +41,8 @@
     });
 
     const res = await fetch("https://super-backend.herokuapp.com/armada-lp", {
-      // const res = await fetch("http://localhost:3000", {
-      method: "POST",
+     //const res = await fetch("http://localhost:3000/armada-lp", {
+        method: "POST",
       body: JSON.stringify(bodyData),
       headers: {
         "content-type": "application/json",
@@ -54,7 +58,8 @@
   <div class="contact-form">
     <h2 class="form-header">
       {LP_JSON[$perma]["form_title1"]}
-      <br> {LP_JSON[$perma]["form_title2"]}
+      <br />
+      {LP_JSON[$perma]["form_title2"]}
     </h2>
     <form class="contact__form">
       <div
@@ -91,22 +96,17 @@
           />
         </li>
         <li>
-          <input
-            style="
-                background: url('/assets/images/icons/{$region}.png') no-repeat
-                  scroll 7px 11px;
-                background-size: 20px 20px;
-                padding-left: 35px;
-              "
+          <PhoneInput
             type="tel"
             name="tel"
             placeholder="Phone"
             autocomplete="tel"
+            bind:dialCode
             bind:value={phone}
           />
         </li>
         <li>
-            <input
+          <input
             style="
               background: url('/assets/images/icons/email.png') no-repeat
                 scroll 7px 11px;
@@ -119,7 +119,7 @@
             autocomplete="email"
             bind:value={email}
           />
-          </li>
+        </li>
         <li>
           <button type="button" class="free-quote-button" on:click={addRes}>
             Get Free Quote</button
@@ -148,7 +148,6 @@
     background: #fff;
     box-shadow: 0 16px 37px -22px rgba(2, 2, 2, 0.32);
     box-shadow: 0 3px 14px -1px rgba(0, 0, 0, 0.2);
-
   }
 
   .contact-form h2 {

@@ -2,13 +2,18 @@
   import { region } from "../services/store";
   import { perma } from "../services/store";
   import LP_JSON from "../assets/lp.json";
+  import PhoneInput from "../components/Form/PhoneInput.svelte";
   let name;
   let phone;
   let email;
   let formStatus;
   let warn;
+  let dialCode;
+
   let lp = $region +"/"+ $perma
   const addRes = async () => {
+    phone = dialCode + phone;
+
     let date = new Date().toLocaleString("tr-TR");
 
     let bodyData = {
@@ -90,17 +95,12 @@
           />
         </li>
         <li>
-          <input
-            style="
-                background: url('/assets/images/icons/{$region}.png') no-repeat
-                  scroll 7px 11px;
-                background-size: 20px 20px;
-                padding-left: 35px;
-              "
+          <PhoneInput
             type="tel"
             name="tel"
             placeholder="Phone"
             autocomplete="tel"
+            bind:dialCode
             bind:value={phone}
           />
         </li>

@@ -48,7 +48,10 @@
 
   let isMobile = mobileDetector();
 </script>
-
+<svelte:head>
+  <title>Armada Full Mouth Dental Implant</title>
+  <meta name="description" content="Armada Smile Full Mouth Dental Implant" />
+</svelte:head>
 <main>
   <Navbar />
 
