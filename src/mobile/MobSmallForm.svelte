@@ -12,8 +12,12 @@
   let lp = $region + "/" + $perma;
 
   const addRes = async () => {
+       if (!name || !phone) {
+      warn = true;
+      return;
+    }
     phone = dialCode + phone;
-
+ 
     let date = new Date().toLocaleString("tr-TR");
 
     let bodyData = {
@@ -24,10 +28,7 @@
       date,
     };
 
-    if (!name || !phone) {
-      warn = true;
-      return;
-    }
+   
     warn = false;
     formStatus = true;
 
@@ -41,8 +42,8 @@
     });
 
     const res = await fetch("https://super-backend.herokuapp.com/armada-lp", {
-     //const res = await fetch("http://localhost:3000/armada-lp", {
-        method: "POST",
+      //const res = await fetch("http://localhost:3000/armada-lp", {
+      method: "POST",
       body: JSON.stringify(bodyData),
       headers: {
         "content-type": "application/json",
@@ -71,7 +72,7 @@
         Your message was sent successfully.
       </div>
       <div
-        class="alert-warn  contact__msg {warn == true
+        class="alert-warn  contact__msg {warn == true &&(!phone || !name)
           ? 'display'
           : 'no-display'}"
         role="alert"
@@ -151,11 +152,10 @@
   }
 
   .contact-form h2 {
-    line-height: 1.5;
-    font-size: 20px;
+    line-height: 1.2;
+    font-size: 18px;
     text-align: center;
     font-weight: 700;
-    margin-bottom: 18px;
     color: #273c56;
   }
 
@@ -178,7 +178,7 @@
   }
   .alert-warn {
     position: relative;
-    color: grey;
+    color: crimson;
     font-size: 12px;
   }
   .contact-form form ul li input,

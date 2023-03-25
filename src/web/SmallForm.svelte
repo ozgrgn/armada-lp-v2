@@ -12,6 +12,10 @@
 
   let lp = $region +"/"+ $perma
   const addRes = async () => {
+  if (!name || !phone) {
+      warn = true;
+      return;
+    }
     phone = dialCode + phone;
 
     let date = new Date().toLocaleString("tr-TR");
@@ -24,10 +28,7 @@
       date,
     };
 
-    if (!name || !phone) {
-      warn = true;
-      return;
-    }
+ 
     warn = false;
     formStatus = true;
 
@@ -70,7 +71,7 @@
         Your message was sent successfully.
       </div>
       <div
-        class="alert-warn  contact__msg {warn == true
+        class="alert-warn  contact__msg {warn == true &&(!phone || !name)
           ? 'display'
           : 'no-display'}"
         role="alert"
@@ -102,6 +103,7 @@
             autocomplete="tel"
             bind:dialCode
             bind:value={phone}
+            
           />
         </li>
         <li>
@@ -151,11 +153,10 @@
   }
 
   .contact-form h2 {
-    line-height: 1.5;
+    line-height: 1.2;
     font-size: 18px;
     text-align: center;
     font-weight: 700;
-    margin-bottom: 18px;
     color: #273c56;
   }
 
@@ -177,8 +178,8 @@
     border-radius: 0.25rem;
   }
   .alert-warn {
+    color:crimson;
     position: relative;
-    color: grey;
     font-size: 12px;
   }
   .contact-form form ul li input,
